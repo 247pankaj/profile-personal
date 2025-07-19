@@ -2,14 +2,6 @@
 
 This is a customized version of the [Start Bootstrap - Personal](https://startbootstrap.com/template/personal/) template, tailored as a personal portfolio website for showcasing my background, skills, and projects. The original template was adapted to use [Formspree](https://formspree.io/) for handling contact form submissions instead of SB Forms.
 
-## 🔗 Live Site
-
-**[Visit Live Portfolio](https://startbootstrap.github.io/startbootstrap-personal/)**
-
-## 📸 Preview
-
-![Personal Template Preview](https://assets.startbootstrap.com/img/screenshots/themes/personal.png)
-
 ## ✨ Key Features
 
 - Clean, modern design built on Bootstrap 5  
