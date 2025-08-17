@@ -1,62 +1,75 @@
 doctype html
 html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1')
+    title Projects - Pankaj Yadav
+    link(rel='icon', type='image/x-icon', href='assets/favicon.ico')
+    include includes/css.pug
 
-    head
-        meta(charset='utf-8')
-        meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
-        meta(name='description', content='Projects portfolio of Pankaj Yadav – Senior Software Developer specializing in scalable backend systems and cloud-based applications.')
-        meta(name='author', content='Pankaj Yadav')
+  body.d-flex.flex-column.h-100.bg-light
+    main.flex-shrink-0
+      include includes/navbar.pug
 
-        title Projects - Pankaj Yadav
+      section.py-5
+        .container.px-5.mb-5
+          .text-center.mb-5
+            h1.display-5.fw-bolder.mb-0
+              span.text-gradient.d-inline Projects
 
-        // Favicon
-        link(rel='icon', type='image/x-icon', href='assets/favicon.ico')
+          //- Project data
+          -
+            var projects = [
+              {
+                title: 'CheckNet United',
+                description: 'A full-stack B2B e-commerce portal for custom RFID tag orders by retailers.',
+                details: 'Built with Angular and .NET 9 microservices, integrated with RabbitMQ, SignalR, and PostgreSQL. Implemented JWT-based auth, real-time import status updates, and Azure containerized deployments using Docker and CI/CD pipelines.',
+                tech: ['Angular', '.NET 9', 'RabbitMQ', 'SignalR', 'PostgreSQL', 'Azure', 'Docker'],
+                image: 'https://www.airport-suppliers.com/wp-content/uploads/2023/07/checkpoint.png',
+                alt: 'CheckNet United Logo',
+                link: '#'
+              },
+              {
+                title: 'NHS HCD and IFR Systems',
+                description: 'Unified NHS clinical funding platform used by over 130 NHS Trusts.',
+                details: 'Led end-to-end development of Blueteq\'s IFR, High Cost Drugs, and Shared Care modules. Delivered workflow digitization, NICE compliance automation, and real-time reporting. Supported £100M+ in annual approvals.',
+                tech: ['ASP.NET MVC', 'SQL Server', 'jQuery', 'NHS Spine Integration'],
+                image: 'https://blueteq.com/wp-content/uploads/2024/02/Large_Blueteq_logo.webp',
+                alt: 'Blueteq NHS System',
+                link: '#'
+              }
+            ];
 
-        include includes/css.pug
+          .row.gy-5
+            each project in projects
+              .col-12
+                .card.border-0.shadow-lg.rounded-4.overflow-hidden
+                  .row.g-0.flex-column.flex-md-row.align-items-stretch
+                    // Text Block
+                    .col-md-7.p-4.p-md-5.bg-white
+                      h3.fw-bold.text-primary.mb-2= project.title
+                      p.text-muted.mb-2.fst-italic= project.description
+                      p.mb-3= project.details
 
-    body.d-flex.flex-column.h-100.bg-light
+                      if project.tech.length
+                        .mb-3
+                          span.fw-semibold.text-secondary Tech Stack:
+                          ul.list-inline.mt-1.mb-0
+                            each t in project.tech
+                              li.list-inline-item.badge.bg-light.text-dark.border.border-1.rounded-pill.px-3.py-1.mx-1.mb-1= t
 
-        main.flex-shrink-0
+                      if project.link && project.link !== '#'
+                        a.btn.btn-outline-primary.mt-3(href=project.link target='_blank') View Project
 
-            // Navigation
-            include includes/navbar.pug
+                    // Image Block
+                    .col-md-5.bg-light.text-center.d-flex.align-items-center.justify-content-center
+                      img.img-fluid.p-4(src=project.image, alt=project.alt, style='max-height: 250px; object-fit: contain;')
 
-            // Projects Section
-            section.py-5
-                .container.px-5.mb-5
-                    .text-center.mb-5
-                        h1.display-5.fw-bolder.mb-0
-                            span.text-gradient.d-inline Projects
-                    .row.gx-5.justify-content-center
+      section.py-5.bg-gradient-primary-to-secondary.text-white
+        .container.px-5.my-5
+          .text-center
+            h2.display-4.fw-bolder.mb-4 Let's build something together
+            a.btn.btn-outline-light.btn-lg.px-5.py-3.fs-6.fw-bolder(href='contact.html') Contact me
 
-                        .col-lg-11.col-xl-9.col-xxl-8
-
-                            // Project Card 1: CheckNet United
-                            .card.overflow-hidden.shadow.rounded-4.border-0.mb-5
-                                .card-body.p-0
-                                    .d-flex.align-items-center.flex-column.flex-md-row
-                                        .p-5
-                                            h2.fw-bolder CheckNet United
-                                            p Developed a full-stack B2B e-commerce portal enabling retailers to order custom RFID tags. Used Angular and .NET 9 microservices with RabbitMQ, SignalR, and PostgreSQL. Implemented secure JWT authentication and real-time status updates for order imports. Deployed on Azure with Docker containers and DevOps pipelines.
-                                        img.img-fluid.ms-md-auto(src='https://www.airport-suppliers.com/wp-content/uploads/2023/07/checkpoint.png', alt='CheckNet United Logo', style='max-width: 300px;')
-
-                            // Project Card 2: NHS HCD and IFR Systems
-                            .card.overflow-hidden.shadow.rounded-4.border-0
-                                .card-body.p-0
-                                    .d-flex.align-items-center.flex-column.flex-md-row
-                                        .p-5
-                                            h2.fw-bolder NHS HCD and IFR Systems
-                                            p Led end-to-end development of Blueteq’s unified NHS funding & clinical platform across 6 modules (IFR, High Cost Drugs, Shared Care). Digitized paper workflows, automated drug approvals, and enabled real-time reporting. Handled £100M+ in annual funding across 130+ Trusts. Reduced admin overheads by 40% and ensured full compliance with NICE/NHS guidelines.
-                                        img.img-fluid.ms-md-auto(src='https://blueteq.com/wp-content/uploads/2024/02/Large_Blueteq_logo.webp', alt='Blueteq NHS System', style='max-width: 300px;')
-
-            // Call to action section
-            section.py-5.bg-gradient-primary-to-secondary.text-white
-                .container.px-5.my-5
-                    .text-center
-                        h2.display-4.fw-bolder.mb-4 Let's build something together
-                        a.btn.btn-outline-light.btn-lg.px-5.py-3.fs-6.fw-bolder(href='contact.html') Contact me
-
-        // Footer
-        include includes/footer.pug
-
-        include includes/scripts.pug
+    include includes/footer.pug
+    include includes/scripts.pug
