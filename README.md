@@ -1,13 +1,11 @@
 # Personal Portfolio – Pankaj Yadav
 
-This is a customized version of the [Start Bootstrap - Personal](https://startbootstrap.com/template/personal/) template, tailored as a personal portfolio website for showcasing my background, skills, and projects. The original template was adapted to use [Formspree](https://formspree.io/) for handling contact form submissions instead of SB Forms.
-
 ## ✨ Key Features
 
 - Clean, modern design built on Bootstrap 5  
 - Responsive across all devices  
 - 4 pages: Home, Resume, Projects, Contact  
-- Working contact form via [Formspree](https://formspree.io/f/mjkogggy)  
+- Working contact form via [Formspree](https://formspree.io/f/xxxxxxxx)  
 - Pug templating for easier HTML management  
 - Sass for custom styling  
 
@@ -18,8 +16,8 @@ This is a customized version of the [Start Bootstrap - Personal](https://startbo
 Clone this repo or download it manually:
 
 ```bash
-git clone https://github.com/StartBootstrap/startbootstrap-personal.git
-cd startbootstrap-personal
+git clone https://github.com/247pankaj/profile-personal.git
+cd profile-personal
 npm install
 
 Development
@@ -49,7 +47,7 @@ This template uses Formspree for contact form submissions.
 The form action is already set to:
 
 ```arduino
-https://formspree.io/f/mjkogggy
+https://formspree.io/f/xxxxxxxx
 To use your own Formspree endpoint:
 
 Create a new form at Formspree.io
@@ -63,9 +61,6 @@ npm run build
 🐞 Issues or Suggestions?
 Please open an issue or reach out directly with feedback or ideas.
 
-📝 License
-This project is based on a template by Start Bootstrap and released under the MIT License.
-
 👨‍💻 Maintainer
 Pankaj Yadav
 🌐 Portfolio
@@ -74,6 +69,3 @@ Pankaj Yadav
 
 
 ---
-
-Let me know if you'd like to add GitHub badges, deployment instructions, or social media links to this file.
-
