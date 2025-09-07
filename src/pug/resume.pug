@@ -6,10 +6,7 @@ html(lang='en')
     meta(name='description', content='Resume of Pankaj Yadav – Senior Software Developer with expertise in .NET, Azure, AI/ML, and modern web development.')
     meta(name='author', content='Pankaj Yadav')
     title Pankaj Yadav - Resume
-
-    // Favicon
     link(rel='icon', type='image/x-icon', href='assets/favicon.ico')
-
     include includes/css.pug
 
   body.d-flex.flex-column.h-100.bg-light
@@ -17,140 +14,126 @@ html(lang='en')
       // Navigation
       include includes/navbar.pug
 
-      // Page Content
+      // Page Header
       .container.px-5.my-5
         .text-center.mb-5
-          h1.display-5.fw-bolder.mb-3
-            span.text-gradient.d-inline Resume
-          a.btn.btn-primary.btn-lg.px-5.py-3(href='assets/Pankaj_Yadav_CV.pdf', target='_blank')
+          h1.display-4.fw-bold.text-gradient Resume
+          p.text-muted.lead.mb-4 A blend of software engineering, AI/ML, and cloud expertise.
+          a.btn.btn-primary.btn-lg.shadow(href='assets/Pankaj_Yadav_CV.pdf', target='_blank')
             i.bi.bi-download.me-2
-            | Download Resume
+            | Download PDF
 
-        .row.gx-5.justify-content-center
-          .col-lg-11.col-xl-9.col-xxl-8
+      // ==========================
+      // Skills Section
+      // ==========================
+      .container.px-5.mb-5
+        .card.shadow-lg.border-0.rounded-4
+          .card-body.p-5
+            .row.gx-5
+              // Core Skills
+              .col-md-6.mb-5
+                .d-flex.align-items-center.mb-4
+                  i.bi.bi-tools.text-primary.fs-3.me-3
+                  h3.fw-bolder.mb-0 Core Skills & Technologies
+                ul.list-unstyled.ms-2
+                  li.mb-2 AI-Driven Development, RAG, Vector DB
+                  li.mb-2 .NET, C#, ASP.NET Core, MVC, Razor Pages
+                  li.mb-2 Angular 19, TypeScript, Kendo UI, AG Grid
+                  li.mb-2 EF Core, REST API Development
 
-            // ==========================
-            // Skills Section
-            // ==========================
-            section.mb-5
-              .card.shadow.border-0.rounded-4
-                .card-body.p-5
-                  // Core Skills
-                  .mb-5
-                    .d-flex.align-items-center.mb-4
-                      .feature.bg-primary.bg-gradient-primary-to-secondary.text-white.rounded-3.me-3
-                        i.bi.bi-tools
-                      h3.fw-bolder.mb-0
-                        span.text-gradient.d-inline Core Skills & Technologies
-                    .row.row-cols-1.row-cols-md-2.mb-4
-                      .col
-                        ul.list-unstyled
-                          li AI-Driven Development, RAG, Vector DB
-                          li .NET, C#, ASP.NET Core, ASP.NET MVC, Razor Pages
-                          li JavaScript / TypeScript, Angular 19, Kendo UI, AG Grid
-                          li EF Core, REST API Development
-                      .col
-                        ul.list-unstyled
-                          li Microsoft Azure (App Services, Functions, Key Vault, Storage)
-                          li Azure DevOps (CI/CD), Docker, Git, Azure Repos
-                          li Agile (Scrum), Microservices, TDD
-                          li SignalR, RabbitMQ
+              // Cloud & DevOps
+              .col-md-6.mb-5
+                .d-flex.align-items-center.mb-4
+                  i.bi.bi-cloud-check.text-primary.fs-3.me-3
+                  h3.fw-bolder.mb-0 Cloud & DevOps
+                ul.list-unstyled.ms-2
+                  li.mb-2 Microsoft Azure (App Services, Functions, Key Vault)
+                  li.mb-2 Azure DevOps (CI/CD), Docker, Git, Repos
+                  li.mb-2 Agile (Scrum), Microservices, TDD
+                  li.mb-2 SignalR, RabbitMQ
 
-                  // Python & AI Skills
-                  .mb-5
-                    .d-flex.align-items-center.mb-4
-                      .feature.bg-primary.bg-gradient-primary-to-secondary.text-white.rounded-3.me-3
-                        i.bi.bi-cpu
-                      h3.fw-bolder.mb-0
-                        span.text-gradient.d-inline AI, ML & Data Science
-                    ul.list-unstyled
-                      li Python, Pandas, Matplotlib, SQL
-                      li Deep Learning (RNN, CNN, LSTM, GRU)
-                      li NLP & LLMs
-                      li GenAI (OpenAI, Gemini, Claude)
+            // Python & AI
+            .mb-5
+              .d-flex.align-items-center.mb-4
+                i.bi.bi-cpu.text-primary.fs-3.me-3
+                h3.fw-bolder.mb-0 AI, ML & Data Science
+              ul.list-unstyled.ms-2
+                li.mb-2 Python, Pandas, Matplotlib, SQL
+                li.mb-2 Deep Learning (RNN, CNN, LSTM, GRU)
+                li.mb-2 NLP & LLMs
+                li.mb-2 GenAI (OpenAI, Gemini, Claude)
 
-                  // Languages
-                  .mb-0
-                    .d-flex.align-items-center.mb-4
-                      .feature.bg-primary.bg-gradient-primary-to-secondary.text-white.rounded-3.me-3
-                        i.bi.bi-code-slash
-                      h3.fw-bolder.mb-0
-                        span.text-gradient.d-inline Languages
-                    .row.row-cols-1.row-cols-md-3.mb-3
-                      .col.mb-4.mb-md-0
-                        .d-flex.align-items-center.bg-light.rounded-4.p-3.h-100 C#
-                      .col.mb-4.mb-md-0
-                        .d-flex.align-items-center.bg-light.rounded-4.p-3.h-100 TypeScript
-                      .col
-                        .d-flex.align-items-center.bg-light.rounded-4.p-3.h-100 Python
-                    .row.row-cols-1.row-cols-md-3
-                      .col.mb-4.mb-md-0
-                        .d-flex.align-items-center.bg-light.rounded-4.p-3.h-100 SQL
-                      .col.mb-4.mb-md-0
-                        .d-flex.align-items-center.bg-light.rounded-4.p-3.h-100 JavaScript
-                      .col
-                        .d-flex.align-items-center.bg-light.rounded-4.p-3.h-100 HTML / CSS
+            // Languages
+            .mb-0
+              .d-flex.align-items-center.mb-4
+                i.bi.bi-code-slash.text-primary.fs-3.me-3
+                h3.fw-bolder.mb-0 Languages
+              .row.g-3
+                each lang in ['C#','Python','TypeScript','SQL','JavaScript','HTML / CSS']
+                  .col-6.col-md-4
+                    .d-flex.align-items-center.justify-content-center.bg-light.rounded-4.p-3.h-100.shadow-sm #{lang}
 
-            // ==========================
-            // Experience Section 
-            // ==========================
-            section.mb-5
-              h2.text-primary.fw-bolder.mb-4 Experience
-              
-              each exp in experiences
-                .card.shadow.border-0.rounded-4.mb-4
-                  .card-body.p-5
-                    .row.align-items-center.gx-5
-                      .col.text-center.text-lg-start.mb-4.mb-lg-0
-                        .bg-light.p-4.rounded-4
-                          .text-primary.fw-bolder.mb-2 #{exp.date}
-                          .small.fw-bolder #{exp.role}
-                          .small.text-muted #{exp.company}
-                          .small.text-muted #{exp.location}
-                      .col-lg-8
-                        ul.mb-0
-                          each d in exp.desc
-                            li= d
+      // ==========================
+      // Experience Section
+      // ==========================
+      .container.px-5.mb-5
+        h2.text-primary.fw-bolder.mb-4.text-center Professional Experience
 
-            // ==========================
-            // Education Section
-            // ==========================
-            section.mb-5
-              h2.text-secondary.fw-bolder.mb-4 Education
+        each exp in experiences
+          .card.shadow-lg.border-0.rounded-4.mb-4
+            .card-body.p-4.p-md-5
+              .row.gx-5.align-items-center
+                // Left column (logo + meta)
+                .col-md-3.text-center.text-md-start.mb-4.mb-md-0
+                  //- img.img-fluid.mb-3.rounded-3(
+                  //-   src=exp.logo || 'assets/company-placeholder.png',
+                  //-   alt=`${exp.company} logo`
+                  //- )
+                  .fw-bold.text-primary #{exp.date}
+                  .small.text-dark.mt-2 #{exp.role}
+                  .small.text-muted #{exp.company}
+                  .small.text-muted #{exp.location}
+                // Right column (description)
+                .col-md-9
+                  ul.mb-0.ps-3
+                    each d in exp.desc
+                      li.mb-2= d
 
-              // MSc
-              .card.shadow.border-0.rounded-4.mb-4
-                .card-body.p-5
-                  .row.align-items-center.gx-5
-                    .col.text-center.text-lg-start.mb-4.mb-lg-0
-                      .bg-light.p-4.rounded-4
-                        .text-secondary.fw-bolder.mb-2 2019 – 2021
-                        .mb-2
-                          .small.fw-bolder University of Hertfordshire
-                          .small.text-muted United Kingdom
-                        .fst-italic
-                          .small.text-muted Master of Science (MS), Data Science and Analytics — Distinction
-                    .col-lg-8
-                      p.mb-2 Focused on Artificial Intelligence, Data Engineering, Machine Learning, and Advanced Analytics.
-                      b Key Skills:
-                        |  Python, Pandas, Matplotlib, SQL, Deep Learning, Neural Networks, Agile Project Management
+      // ==========================
+      // Education Section
+      // ==========================
+      .container.px-5.mb-5
+        h2.text-secondary.fw-bolder.mb-4.text-center Education
 
-              // BE
-              .card.shadow.border-0.rounded-4.mb-4
-                .card-body.p-5
-                  .row.align-items-center.gx-5
-                    .col.text-center.text-lg-start.mb-4.mb-lg-0
-                      .bg-light.p-4.rounded-4
-                        .text-secondary.fw-bolder.mb-2 2009 – 2013
-                        .mb-2
-                          .small.fw-bolder University of Mumbai
-                          .small.text-muted India
-                        .fst-italic
-                          .small.text-muted Bachelor of Engineering (BE), Computer Science — First Class
-                    .col-lg-8
-                      p.mb-2 Specialized in Computer Science fundamentals, algorithms, and system design.
-                      b Key Skills:
-                        |  SDLC, OOP, DBMS, SQL, Data Structures, Web Technologies (HTML, CSS, JavaScript), Matlab
+        // MSc
+        .card.shadow-lg.border-0.rounded-4.mb-4
+          .card-body.p-4.p-md-5
+            .row.gx-5.align-items-center
+              .col-md-3.text-center.text-md-start.mb-4.mb-md-0
+                //- img.img-fluid.mb-3.rounded-3(src='assets/herts.png', alt='University of Hertfordshire')
+                .fw-bold.text-secondary 2019 – 2021
+                .small.fw-bolder University of Hertfordshire
+                .small.text-muted United Kingdom
+              .col-md-9
+                h5.fw-bold.mb-2 Master of Science (MS), Data Science and Analytics — Distinction
+                p.mb-2 Focused on Artificial Intelligence, Data Engineering, Machine Learning, and Advanced Analytics.
+                b Key Skills:
+                |  Python, Pandas, SQL, Deep Learning, Agile Project Management
+
+        // BE
+        .card.shadow-lg.border-0.rounded-4.mb-4
+          .card-body.p-4.p-md-5
+            .row.gx-5.align-items-center
+              .col-md-3.text-center.text-md-start.mb-4.mb-md-0
+                //- img.img-fluid.mb-3.rounded-3(src='assets/mumbai.png', alt='University of Mumbai')
+                .fw-bold.text-secondary 2009 – 2013
+                .small.fw-bolder University of Mumbai
+                .small.text-muted India
+              .col-md-9
+                h5.fw-bold.mb-2 Bachelor of Engineering (BE), Computer Science — First Class
+                p.mb-2 Specialized in Computer Science fundamentals, algorithms, and system design.
+                b Key Skills:
+                |  SDLC, OOP, DBMS, SQL, Data Structures, Web Tech (HTML, CSS, JS), Matlab
 
     // Footer
     include includes/footer.pug
