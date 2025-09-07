@@ -10,6 +10,36 @@ $secondary: $pink;
 
 // Bootstrap Variable Functions
 $enable-negative-margins: true;
+// Variables
+
+// Refined Brand Colors
+$blue: #1e30f3;   // Professional deep blue
+$pink: #e21e80;   // Accent magenta
+$green: #2fb380;  // Success (modern green)
+$teal: #1abc9c;   // Info (calming teal)
+$orange: #f39c12; // Warning (vivid orange)
+$red: #e74c3c;    // Danger (clear red)
+$gray: #6c757d;   // Neutral gray
+
+// Redefine Bootstrap State Colors
+$primary:   $blue;
+$secondary: $pink;
+$success:   $green;
+$info:      $teal;
+$warning:   $orange;
+$danger:    $red;
+$light:     #f8f9fa;
+$dark:      #212529;
+
+// Bootstrap Variable Functions
+$enable-negative-margins: true;
+
+// Override Bootstrap Typography Variables
+$font-family-sans-serif: 'Plus Jakarta Sans', sans-serif;
+$font-weight-light: 200;
+
+// Custom Border Variables
+$border-radius-xl: 1rem;
 
 // Override Bootstrap Typography Variables
 $font-family-sans-serif: 'Plus Jakarta Sans';

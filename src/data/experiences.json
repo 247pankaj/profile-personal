@@ -1,0 +1,90 @@
+[
+  {
+    "date": "Jan 2025 – Present",
+    "role": "Software Developer",
+    "company": "Checkpoint Systems",
+    "location": "Netherlands",
+    "desc": [
+      "Engineered backend services with .NET, implementing scalable APIs and messaging workflows.",
+      "Designed seamless Angular user journeys, improving usability and engagement.",
+      "Built high-performance data tables using AG Grid with virtual scrolling & advanced filtering.",
+      "Developed responsive UI components with Kendo UI for Angular.",
+      "Integrated RabbitMQ and SignalR for real-time communication.",
+      "Containerized .NET APIs using Docker, published to Azure Container Registry (ACR).",
+      "Automated build, test, and deployment via Azure DevOps pipelines."
+    ]
+  },
+  {
+    "date": "Sep 2021 – Jul 2024",
+    "role": "Senior .NET Developer",
+    "company": "Blueteq Limited",
+    "location": "United Kingdom",
+    "desc": [
+      "Designed and developed backend services with C# and .NET Core for NHS systems.",
+      "Integrated third-party systems with RESTful APIs for interoperability.",
+      "Designed and optimized SQL Server databases for performance & reliability.",
+      "Implemented microservices architecture for modular, maintainable systems.",
+      "Automated CI/CD pipelines with Azure DevOps and Azure cloud services.",
+      "Worked in Agile teams to deliver secure, efficient healthcare solutions."
+    ]
+  },
+  {
+    "date": "Jun 2020 – May 2021",
+    "role": "Software Developer",
+    "company": "Kelkoo Group",
+    "location": "United Kingdom",
+    "desc": [
+      "Developed web applications using ASP.NET Core & MVC.",
+      "Built RESTful APIs to connect frontend and backend.",
+      "Implemented responsive UIs with Razor Pages and JavaScript.",
+      "Automated data extraction using Python."
+    ]
+  },
+  {
+    "date": "Jan 2019 – Sep 2019",
+    "role": "Software Developer",
+    "company": "SugarBox",
+    "location": "India",
+    "desc": [
+      "Built backend services with ASP.NET Core ensuring performance & security.",
+      "Optimized database schema and queries with Entity Framework.",
+      "Applied MVC and Dependency Injection patterns."
+    ]
+  },
+  {
+    "date": "Sep 2016 – Jan 2019",
+    "role": "Software Developer",
+    "company": "Celusion Technologies",
+    "location": "India",
+    "desc": [
+      "Full SDLC participation for insurance mobile applications.",
+      "Implemented responsive UI components (Fragments, ViewPager, Popups).",
+      "Integrated Google Maps API for real-time geolocation.",
+      "Built offline functionality with SQLite DB.",
+      "Enabled social login & streamlined networking with third-party libraries."
+    ]
+  },
+  {
+    "date": "Aug 2014 – Jul 2016",
+    "role": "Software Developer",
+    "company": "Mobicule Technologies",
+    "location": "India",
+    "desc": [
+      "Developed Spring MVC-based web applications.",
+      "Designed REST & SOAP services with XML parsing.",
+      "Implemented Hibernate ORM with Spring for persistence.",
+      "Secured apps with Spring Security + LDAP integration."
+    ]
+  },
+  {
+    "date": "Mar 2014 – Jun 2014",
+    "role": "Android Developer Intern",
+    "company": "CWIDE Softech",
+    "location": "India",
+    "desc": [
+      "Implemented Android lifecycle components (Activity, Service, BroadcastReceiver).",
+      "Developed modules, debugging & defect resolution.",
+      "Supported system integration and maintenance."
+    ]
+  }
+]

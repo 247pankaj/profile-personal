@@ -1,158 +1,157 @@
 doctype html
 html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    meta(name='description', content='Resume of Pankaj Yadav – Senior Software Developer with expertise in .NET, Azure, AI/ML, and modern web development.')
+    meta(name='author', content='Pankaj Yadav')
+    title Pankaj Yadav - Resume
 
-    head
-        meta(charset='utf-8')
-        meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
-        meta(name='description', content='Resume of Pankaj Yadav – Senior Software Developer with expertise in .NET, Azure, and modern web development.')
-        meta(name='author', content='Pankaj Yadav')
+    // Favicon
+    link(rel='icon', type='image/x-icon', href='assets/favicon.ico')
 
-        title Pankaj Yadav - Resume
+    include includes/css.pug
 
-        // Favicon
-        link(rel='icon', type='image/x-icon', href='assets/favicon.ico')
+  body.d-flex.flex-column.h-100.bg-light
+    main.flex-shrink-0
+      // Navigation
+      include includes/navbar.pug
 
-        include includes/css.pug
+      // Page Content
+      .container.px-5.my-5
+        .text-center.mb-5
+          h1.display-5.fw-bolder.mb-3
+            span.text-gradient.d-inline Resume
+          a.btn.btn-primary.btn-lg.px-5.py-3(href='assets/Pankaj_Yadav_CV.pdf', target='_blank')
+            i.bi.bi-download.me-2
+            | Download Resume
 
-    body.d-flex.flex-column.h-100.bg-light
+        .row.gx-5.justify-content-center
+          .col-lg-11.col-xl-9.col-xxl-8
 
-        main.flex-shrink-0
+            // ==========================
+            // Skills Section
+            // ==========================
+            section.mb-5
+              .card.shadow.border-0.rounded-4
+                .card-body.p-5
+                  // Core Skills
+                  .mb-5
+                    .d-flex.align-items-center.mb-4
+                      .feature.bg-primary.bg-gradient-primary-to-secondary.text-white.rounded-3.me-3
+                        i.bi.bi-tools
+                      h3.fw-bolder.mb-0
+                        span.text-gradient.d-inline Core Skills & Technologies
+                    .row.row-cols-1.row-cols-md-2.mb-4
+                      .col
+                        ul.list-unstyled
+                          li AI-Driven Development, RAG, Vector DB
+                          li .NET, C#, ASP.NET Core, ASP.NET MVC, Razor Pages
+                          li JavaScript / TypeScript, Angular 19, Kendo UI, AG Grid
+                          li EF Core, REST API Development
+                      .col
+                        ul.list-unstyled
+                          li Microsoft Azure (App Services, Functions, Key Vault, Storage)
+                          li Azure DevOps (CI/CD), Docker, Git, Azure Repos
+                          li Agile (Scrum), Microservices, TDD
+                          li SignalR, RabbitMQ
 
-            // Navigation
-            include includes/navbar.pug
+                  // Python & AI Skills
+                  .mb-5
+                    .d-flex.align-items-center.mb-4
+                      .feature.bg-primary.bg-gradient-primary-to-secondary.text-white.rounded-3.me-3
+                        i.bi.bi-cpu
+                      h3.fw-bolder.mb-0
+                        span.text-gradient.d-inline AI, ML & Data Science
+                    ul.list-unstyled
+                      li Python, Pandas, Matplotlib, SQL
+                      li Deep Learning (RNN, CNN, LSTM, GRU)
+                      li NLP & LLMs
+                      li GenAI (OpenAI, Gemini, Claude)
 
-            // Page Content
-            .container.px-5.my-5
-                .text-center.mb-5
-                    h1.display-5.fw-bolder.mb-0
-                        span.text-gradient.d-inline Resume
-                .row.gx-5.justify-content-center
+                  // Languages
+                  .mb-0
+                    .d-flex.align-items-center.mb-4
+                      .feature.bg-primary.bg-gradient-primary-to-secondary.text-white.rounded-3.me-3
+                        i.bi.bi-code-slash
+                      h3.fw-bolder.mb-0
+                        span.text-gradient.d-inline Languages
+                    .row.row-cols-1.row-cols-md-3.mb-3
+                      .col.mb-4.mb-md-0
+                        .d-flex.align-items-center.bg-light.rounded-4.p-3.h-100 C#
+                      .col.mb-4.mb-md-0
+                        .d-flex.align-items-center.bg-light.rounded-4.p-3.h-100 TypeScript
+                      .col
+                        .d-flex.align-items-center.bg-light.rounded-4.p-3.h-100 Python
+                    .row.row-cols-1.row-cols-md-3
+                      .col.mb-4.mb-md-0
+                        .d-flex.align-items-center.bg-light.rounded-4.p-3.h-100 SQL
+                      .col.mb-4.mb-md-0
+                        .d-flex.align-items-center.bg-light.rounded-4.p-3.h-100 JavaScript
+                      .col
+                        .d-flex.align-items-center.bg-light.rounded-4.p-3.h-100 HTML / CSS
 
-                    .col-lg-11.col-xl-9.col-xxl-8
+            // ==========================
+            // Experience Section
+            // ==========================
+            section.mb-5
+              h2.text-primary.fw-bolder.mb-4 Experience
+              
+              each exp in experiences
+                .card.shadow.border-0.rounded-4.mb-4
+                  .card-body.p-5
+                    .row.align-items-center.gx-5
+                      .col.text-center.text-lg-start.mb-4.mb-lg-0
+                        .bg-light.p-4.rounded-4
+                          .text-primary.fw-bolder.mb-2 #{exp.date}
+                          .small.fw-bolder #{exp.role}
+                          .small.text-muted #{exp.company}
+                          .small.text-muted #{exp.location}
+                      .col-lg-8
+                        ul.mb-0
+                          each d in exp.desc
+                            li= d
 
-                        // Experience Section
-                        section
-                            .d-flex.align-items-center.justify-content-between.mb-4
-                                h2.text-primary.fw-bolder.mb-0 Experience
-                                a.btn.btn-primary.px-4.py-3(href='assets/Pankaj_Yadav_CV.pdf', target='_blank')
-                                    .d-inline-block.bi.bi-download.me-2
-                                    | Download Resume
+            // ==========================
+            // Education Section
+            // ==========================
+            section.mb-5
+              h2.text-secondary.fw-bolder.mb-4 Education
 
-                            // Experience Card 1
-                            .card.shadow.border-0.rounded-4.mb-5
-                                .card-body.p-5
-                                    .row.align-items-center.gx-5
-                                        .col.text-center.text-lg-start.mb-4.mb-lg-0
-                                            .bg-light.p-4.rounded-4
-                                                .text-primary.fw-bolder.mb-2 2025 – Present
-                                                .small.fw-bolder Fullstack Developer
-                                                .small.text-muted Checkpoint Systems
-                                                .small.text-muted Netherlands
-                                        .col-lg-8
-                                            div Leading the backend development of cloud-native applications using .NET 8/9, Azure, and RabbitMQ. Designed microservices, optimized SQL Server performance, and implemented CI/CD pipelines in Azure DevOps. Collaborated with cross-functional teams on large-scale enterprise solutions.
+              // MSc
+              .card.shadow.border-0.rounded-4.mb-4
+                .card-body.p-5
+                  .row.align-items-center.gx-5
+                    .col.text-center.text-lg-start.mb-4.mb-lg-0
+                      .bg-light.p-4.rounded-4
+                        .text-secondary.fw-bolder.mb-2 2019 – 2021
+                        .mb-2
+                          .small.fw-bolder University of Hertfordshire
+                          .small.text-muted United Kingdom
+                        .fst-italic
+                          .small.text-muted Master of Science (MS), Data Science and Analytics — Distinction
+                    .col-lg-8
+                      p.mb-2 Focused on Artificial Intelligence, Data Engineering, Machine Learning, and Advanced Analytics.
+                      b Key Skills:
+                        |  Python, Pandas, Matplotlib, SQL, Deep Learning, Neural Networks, Agile Project Management
 
-                            // Experience Card 2
-                            .card.shadow.border-0.rounded-4.mb-5
-                                .card-body.p-5
-                                    .row.align-items-center.gx-5
-                                        .col.text-center.text-lg-start.mb-4.mb-lg-0
-                                            .bg-light.p-4.rounded-4
-                                                .text-primary.fw-bolder.mb-2 2021 – 2024
-                                                .small.fw-bolder Software Developer
-                                                .small.text-muted Blueteq Limited
-                                                .small.text-muted United Kingdom
-                                        .col-lg-8
-                                            div Built and maintained NHS-critical systems using ASP.NET Core and Angular. Delivered RESTful APIs and secure authentication modules. Contributed to DevOps automation, infrastructure improvements, and bug triaging under agile methodology.
+              // BE
+              .card.shadow.border-0.rounded-4.mb-4
+                .card-body.p-5
+                  .row.align-items-center.gx-5
+                    .col.text-center.text-lg-start.mb-4.mb-lg-0
+                      .bg-light.p-4.rounded-4
+                        .text-secondary.fw-bolder.mb-2 2009 – 2013
+                        .mb-2
+                          .small.fw-bolder University of Mumbai
+                          .small.text-muted India
+                        .fst-italic
+                          .small.text-muted Bachelor of Engineering (BE), Computer Science — First Class
+                    .col-lg-8
+                      p.mb-2 Specialized in Computer Science fundamentals, algorithms, and system design.
+                      b Key Skills:
+                        |  SDLC, OOP, DBMS, SQL, Data Structures, Web Technologies (HTML, CSS, JavaScript), Matlab
 
-                        // Education Section
-                        section
-                            h2.text-secondary.fw-bolder.mb-4 Education
-                            
-                            // Education Card 1
-                            .card.shadow.border-0.rounded-4.mb-5
-                                .card-body.p-5
-                                     .row.align-items-center.gx-5
-                                        .col.text-center.text-lg-start.mb-4.mb-lg-0
-                                            .bg-light.p-4.rounded-4
-                                                .text-secondary.fw-bolder.mb-2 2019 – 2021
-                                                .mb-2
-                                                    .small.fw-bolder University of Hertfordshire
-                                                    .small.text-muted UK
-                                                .fst-italic
-                                                    .small.text-muted Masters
-                                                    .small.text-muted Data Science
-                                        .col-lg-8
-                                            div Specialized in software engineering and enterprise application development. Thesis focused on distributed systems and service-oriented architecture.
-
-                            // Education Card 2
-                            .card.shadow.border-0.rounded-4.mb-5
-                                .card-body.p-5
-                                    .row.align-items-center.gx-5
-                                        .col.text-center.text-lg-start.mb-4.mb-lg-0
-                                            .bg-light.p-4.rounded-4
-                                                .text-secondary.fw-bolder.mb-2 2009 – 2013
-                                                .mb-2
-                                                    .small.fw-bolder Mumbai University
-                                                    .small.text-muted India
-                                                .fst-italic
-                                                    .small.text-muted Bachelor of Technology
-                                                    .small.text-muted Computer Science
-                                        .col-lg-8
-                                            div Completed core coursework in data structures, algorithms, databases, and web technologies. Developed multiple academic and real-time projects.
-
-                        // Divider
-                        .pb-5
-
-                        // Skills Section
-                        section
-                            // Skillset Card
-                            .card.shadow.border-0.rounded-4.mb-5
-                                .card-body.p-5
-                                    // Professional skills list
-                                    .mb-5
-                                        .d-flex.align-items-center.mb-4
-                                            .feature.bg-primary.bg-gradient-primary-to-secondary.text-white.rounded-3.me-3
-                                                i.bi.bi-tools
-                                            h3.fw-bolder.mb-0
-                                                span.text-gradient.d-inline Professional Skills
-                                        .row.row-cols-1.row-cols-md-3.mb-4
-                                            .col.mb-4.mb-md-0
-                                                .d-flex.align-items-center.bg-light.rounded-4.p-3.h-100 .NET & C#
-                                            .col.mb-4.mb-md-0
-                                                .d-flex.align-items-center.bg-light.rounded-4.p-3.h-100 Azure Services (App Services, Functions, Key Vault, etc.)
-                                            .col
-                                                .d-flex.align-items-center.bg-light.rounded-4.p-3.h-100 REST API Development
-                                        .row.row-cols-1.row-cols-md-3
-                                            .col.mb-4.mb-md-0
-                                                .d-flex.align-items-center.bg-light.rounded-4.p-3.h-100 Angular & TypeScript
-                                            .col.mb-4.mb-md-0
-                                                .d-flex.align-items-center.bg-light.rounded-4.p-3.h-100 SQL Server & Entity Framework
-                                            .col
-                                                .d-flex.align-items-center.bg-light.rounded-4.p-3.h-100 CI/CD with Azure DevOps
-
-                                    // Languages list
-                                    .mb-0
-                                        .d-flex.align-items-center.mb-4
-                                            .feature.bg-primary.bg-gradient-primary-to-secondary.text-white.rounded-3.me-3
-                                                i.bi.bi-code-slash
-                                            h3.fw-bolder.mb-0
-                                                span.text-gradient.d-inline Languages
-                                        .row.row-cols-1.row-cols-md-3.mb-4
-                                            .col.mb-4.mb-md-0
-                                                .d-flex.align-items-center.bg-light.rounded-4.p-3.h-100 C#
-                                            .col.mb-4.mb-md-0
-                                                .d-flex.align-items-center.bg-light.rounded-4.p-3.h-100 TypeScript
-                                            .col
-                                                .d-flex.align-items-center.bg-light.rounded-4.p-3.h-100 JavaScript
-                                        .row.row-cols-1.row-cols-md-3
-                                            .col.mb-4.mb-md-0
-                                                .d-flex.align-items-center.bg-light.rounded-4.p-3.h-100 SQL
-                                            .col.mb-4.mb-md-0
-                                                .d-flex.align-items-center.bg-light.rounded-4.p-3.h-100 HTML/CSS
-                                            .col
-                                                .d-flex.align-items-center.bg-light.rounded-4.p-3.h-100 Python (basic scripting)
-
-        // Footer
-        include includes/footer.pug
-
-        include includes/scripts.pug
+    // Footer
+    include includes/footer.pug
+    include includes/scripts.pug

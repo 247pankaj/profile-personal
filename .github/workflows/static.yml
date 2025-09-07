@@ -33,7 +33,9 @@ jobs:
         run: npm ci
 
       - name: Build project
-        run: npm run build # Assumes static site is generated in 'dist' or similar
+        env:
+          FORMSPREE_ID: ${{ secrets.FORMSPREE_ID }} # 🔑 inject secret here
+        run: npm run build # Assumes static site is generated in 'dist'
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
@@ -41,7 +43,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './dist' # Adjust path based on your build output folder
+          path: './dist' # Adjust path if different
 
       - name: Deploy to GitHub Pages
         id: deployment
